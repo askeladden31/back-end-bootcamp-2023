@@ -95,7 +95,15 @@ class MyController extends AbstractController
     public function listCollections(Request $request): Response
     {
         $nr = $request->query->get('target_not_reached');
+        // /collections?target_not_reached=true
+        // "Отримати список зборів, які мають суму внесків менше за цільову суму."
+
         $lte = $request->query->get('remaining_lte');
+        // /collections?remaining_lte={amount}
+        // "Реалізувати можливість фільтрування зборів за залишеною сумою до досягнення кінцевої суми." 
+        // This requirement is quite ambiguously worded. After a long consideration, the interpretation 
+        // I decided to use is "list only those collections, where the remaining sum is less or equal to 
+        // a given {amount}", which is implemented here.
 
         $collections = null;
 
