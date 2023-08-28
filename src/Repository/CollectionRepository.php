@@ -41,6 +41,7 @@ class CollectionRepository extends ServiceEntityRepository
             ->groupBy('coll')
             ->having('remainingAmount <= :amount')
             ->setParameter('amount', $amount)
+            ->orderBy('remainingAmount', 'ASC')
             ->getQuery()
             ->getResult();
     }
