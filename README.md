@@ -1,4 +1,4 @@
-Endpoints:  
+Routes:  
   
 **/collections/create**  
 Create new collection, POST request structure:  
