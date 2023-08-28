@@ -1,6 +1,6 @@
 Endpoints:  
   
-**/collections/create:**  
+**/collections/create**  
 Create new collection, POST request structure:  
 {  
   "title": "..."  
@@ -9,23 +9,23 @@ Create new collection, POST request structure:
   "link": "..."  
 }  
   
-**/collections/{id}/contribute:**  
+**/collections/{id}/contribute**  
 Contribute to collection with id={id}, POST request structure:  
 {  
   "user_name": "..."  
   "amount": "..."  
 }  
   
-**/collections/{id}:**  
+**/collections/{id}**  
 Display details for collection with id={id}; GET request  
   
-**/collections/:**  
+**/collections/**  
 List all collections, GET request  
   
 Optional parameters:  
   
-**/collections?target_not_reached=true:**  
+**/collections?target_not_reached=true**  
 "Отримати список зборів, які мають суму внесків менше за цільову суму."  
   
-**/collections?remaining_lte={amount}:**  
+**/collections?remaining_lte={amount}**  
 "Реалізувати можливість фільтрування зборів за залишеною сумою до досягнення кінцевої суми." - ***this requirement is quite ambiguously worded. After a long consideration, the interpretation I decided to use is "list only those collections, where the remaining sum is less or equal to a given {amount}", which is implemented here. Sorry for any misunderstanding.***
