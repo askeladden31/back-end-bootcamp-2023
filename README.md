@@ -1,3 +1,5 @@
+Live demo is available at: https://www.main-bvxea6i-ylrmu4pzuqda6.eu-5.platformsh.site/ (will expire in ~30 days)  
+  
 Routes:  
   
 **/collections/create**  
